@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Contact | Vibe with Sammi</title>
+
+  <meta
+    name="description"
+    content="Work with Sammi on UGC, brand content, video editing, event photography and behind-the-scenes content."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chango&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="contact-page">
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-shell">
+
+      <div class="nav-panel" id="mainNav">
+
+        <a href="index.html" class="nav-link">
+          Home
+        </a>
+
+        <a href="about.html" class="nav-link">
+          About
+        </a>
+
+        <div class="nav-dropdown">
+
+          <button
+            class="nav-link recent-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="recentWorkMenu"
+          >
+            Recent Work
+            <span class="nav-arrow">⌄</span>
+          </button>
+
+          <div
+            class="recent-dropdown"
+            id="recentWorkMenu"
+          >
+            <a href="content.html">
+              My Content
+            </a>
+
+            <a href="ugc.html">
+              UGC + Brand Work
+            </a>
+          </div>
+
+        </div>
+
+        <a href="services.html" class="nav-link">
+          Rates + Services
+        </a>
+
+        <a href="media-kit.html" class="nav-link">
+          Media Kit
+        </a>
+
+        <a href="contact.html" class="nav-link active">
+          Contact
+        </a>
+
+      </div>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span>ME</span>
+        <span>NU</span>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================================================
+       MAIN
+  ========================================================== -->
+
+  <main class="contact-main">
+
+    <section class="contact-hero">
+
+      <div class="contact-shell">
+
+        <div class="contact-hero-grid">
+
+          <!-- =========================
+               INTRO
+          ========================== -->
+
+          <div class="contact-intro">
+
+            <span class="contact-eyebrow">
+              GET_IN_TOUCH.EXE
+            </span>
+
+            <h1>
+              LET'S WORK<br>
+              TOGETHER.
+            </h1>
+
+            <p class="contact-lead">
+              Have a project in mind? Tell me what you're working on.
+            </p>
+
+            <p class="contact-copy">
+              Whether you need content for your brand, an editor to bring
+              your footage together or someone to capture the moment,
+              send me the details and let's see what we can create.
+            </p>
+
+
+            <!-- =========================
+                 DIRECT CONTACT
+            ========================== -->
+
+            <div class="contact-details">
+
+              <div class="contact-detail">
+                <span class="contact-detail-label">
+                  EMAIL
+                </span>
+
+                <a href="mailto:hello@vibewithsammi.com">
+                  hello.vibewithsammi@gmail.com
+                </a>
+              </div>
+
+              <div class="contact-detail">
+                <span class="contact-detail-label">
+                  BASED IN
+                </span>
+
+                <span>
+                  Atlanta, GA
+                </span>
+              </div>
+
+              <div class="contact-detail">
+                <span class="contact-detail-label">
+                  AVAILABLE FOR
+                </span>
+
+                <span>
+                  Local + Remote Projects
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               FORM WINDOW
+          ========================== -->
+
+          <div class="contact-window">
+
+            <div class="contact-window-bar">
+
+              <div class="contact-window-title">
+
+                <span class="contact-window-icon">
+                  ✉
+                </span>
+
+                <span>
+                  new_message.exe
+                </span>
+
+              </div>
+
+              <div
+                class="contact-window-controls"
+                aria-hidden="true"
+              >
+                <span>−</span>
+                <span>□</span>
+                <span>×</span>
+              </div>
+
+            </div>
+
+
+            <div class="contact-window-body">
+
+              <form
+                class="contact-form"
+                action="https://formspree.io/f/xwlprzen"
+                method="POST"
+              >
+
+                <!-- NAME -->
+
+                <div class="contact-field">
+
+                  <label for="name">
+                    NAME
+                  </label>
+
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    required
+                  >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-field">
+
+                  <label for="email">
+                    EMAIL
+                  </label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@email.com"
+                    autocomplete="email"
+                    required
+                  >
+
+                </div>
+
+
+                <!-- COMPANY -->
+
+                <div class="contact-field">
+
+                  <label for="company">
+                    COMPANY / BRAND
+                  </label>
+
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Optional"
+                    autocomplete="organization"
+                  >
+
+                </div>
+
+
+                <!-- PROJECT TYPE -->
+
+                <div class="contact-field">
+
+                  <label for="project-type">
+                    WHAT ARE YOU LOOKING FOR?
+                  </label>
+
+                  <select
+  id="project-type"
+  name="project_type"
+  required
+>
+  <option value="" disabled selected>
+    Select a partnership type
+  </option>
+
+  <option value="UGC Content">
+    UGC Content
+  </option>
+
+  <option value="Sponsored Content">
+    Sponsored Content
+  </option>
+
+  <option value="Collab Post">
+    Collab Post
+  </option>
+
+  <option value="Brand Ambassador Partnership">
+    Brand Ambassador Partnership
+  </option>
+
+  <option value="Event Partnership">
+    Event Partnership
+  </option>
+
+  <option value="Other">
+    Something Else
+  </option>
+</select>
+
+                </div>
+
+
+                <!-- BUDGET -->
+
+                <div class="contact-field contact-field-full">
+
+                  <label for="budget">
+                    BUDGET
+                  </label>
+
+                  <select
+                    id="budget"
+                    name="budget"
+                  >
+
+                    <option
+                      value=""
+                      disabled
+                      selected
+                    >
+                      Select a range
+                    </option>
+
+                    <option value="Under $250">
+                      Under $250
+                    </option>
+
+                    <option value="$250–$500">
+                      $250–$500
+                    </option>
+
+                    <option value="$500–$1,000">
+                      $500–$1,000
+                    </option>
+
+                    <option value="$1,000–$2,500">
+                      $1,000–$2,500
+                    </option>
+
+                    <option value="$2,500+">
+                      $2,500+
+                    </option>
+
+                    <option value="Not sure yet">
+                      Not sure yet
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="contact-field contact-field-full">
+
+                  <label for="message">
+                    TELL ME ABOUT THE PROJECT
+                  </label>
+
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="7"
+                    placeholder="What are you working on? Tell me what you have in mind."
+                    required
+                  ></textarea>
+
+                </div>
+
+
+                <!-- SUBJECT FOR FORMSPREE -->
+
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Vibe with Sammi Inquiry"
+                >
+
+
+                <!-- SUBMIT -->
+
+                <button
+                  type="submit"
+                  class="xp-button contact-submit"
+                >
+                  <span>SEND MESSAGE</span>
+                  <span>→</span>
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- =========================
+             STICKY NOTE
+        ========================== -->
+
+        <div class="contact-note">
+          <span>✦</span>
+
+          <p>
+            currently booking new projects
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+     FOOTER
+========================== -->
+
+<footer class="site-footer">
+    <div class="footer-shell">
+  
+      <div class="footer-brand">
+        <span class="footer-script">Vibe with</span>
+  
+        <strong>SAMMI</strong>
+  
+        <p>you made it to the bottom of the internet.</p>
+      </div>
+  
+  
+      <div class="footer-links">
+  
+        <div>
+          <span>EXPLORE</span>
+  
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="content.html">My Content</a>
+          <a href="ugc.html">UGC + Brand Work</a>
+          <a href="services.html">Rates + Services</a>
+        </div>
+  
+  
+        <div>
+          <span>CONNECT</span>
+  
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">YouTube</a>
+          <a href="#">LinkedIn</a>
+        </div>
+  
+  
+        <div>
+          <span>OTHER SITES</span>
+  
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            Floyé Creative Co.
+          </a>
+  
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            Sammi Shot That
+          </a>
+  
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            UX Portfolio
+          </a>
+  
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            Linktree
+          </a>
+        </div>
+  
+      </div>
+  
+  
+      <div class="footer-bottom">
+  
+        <span>ATLANTA, GA</span>
+  
+        <a href="mailto:hello.vibewithsammi@gmail.com">
+          hello.vibewithsammi@gmail.com
+        </a>
+  
+        <span>© 2026 VIBE WITH SAMMI</span>
+  
+      </div>
+  
+    </div>
+  </footer>
+
+
+  <script src="main.js"></script>
+
+</body>
+</html>
