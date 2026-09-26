@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vibe With Sammi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chango&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="hero">
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="site-nav" aria-label="Main navigation">
+
+      <div class="nav-shell">
+
+        <div class="nav-panel" id="mainNav">
+
+          <a href="index.html" class="nav-link active">
+            Home
+          </a>
+
+          <a href="about.html" class="nav-link">
+            About
+          </a>
+
+          <div class="nav-dropdown">
+
+            <button
+              class="nav-link recent-trigger"
+              type="button"
+              aria-expanded="false"
+              aria-controls="recentWorkMenu"
+            >
+              Recent Work
+              <span class="nav-arrow">⌄</span>
+            </button>
+
+            <div
+              class="recent-dropdown"
+              id="recentWorkMenu"
+            >
+
+              <a href="content.html">
+                My Content
+              </a>
+
+              <a href="ugc.html">
+                UGC + Brand Work
+              </a>
+
+            </div>
+
+          </div>
+
+          <a href="services.html" class="nav-link">
+            Rates + Services
+          </a>
+
+          <a href="media-kit.html" class="nav-link">
+            Media Kit
+          </a>
+
+          <a href="contact.html" class="nav-link">
+            Contact
+          </a>
+
+        </div>
+
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-controls="mainNav"
+          aria-expanded="false"
+        >
+          <span>ME</span>
+          <span>NU</span>
+        </button>
+
+      </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO WINDOW
+    ========================== -->
+
+    <section class="hero-window">
+
+      <!-- WELCOME POPUP -->
+
+      <div class="mini-window welcome-window">
+
+        <div class="mini-window-bar">
+
+          <span>
+            welcome.exe
+          </span>
+
+          <button
+            type="button"
+            aria-label="Close welcome message"
+          >
+            ×
+          </button>
+
+        </div>
+
+        <div class="mini-window-content">
+
+          <span class="status-dot"></span>
+
+          <span>
+            you're in Sammi's corner of the internet
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- LEFT SIDE -->
+
+      <div class="hero-copy">
+
+        <div class="hero-heading">
+
+          <span class="hero-script">
+            Sammi's
+          </span>
+
+          <h1>
+            CREATOR
+            <br>
+            PORTFOLIO
+          </h1>
+
+        </div>
+
+
+        <div class="hero-details">
+
+          <p class="location">
+            <span>⌖</span>
+            Atlanta, GA
+          </p>
+
+          <p class="niches">
+            Tech, lifestyle +
+            <br>
+            creative entrepreneurship
+          </p>
+
+          <a
+            href="mailto:hello.vibewithsammi@gmail.com"
+            class="hero-email"
+          >
+            hello.vibewithsammi@gmail.com
+          </a>
+
+        </div>
+
+
+        <div class="hero-socials">
+
+          <a href="#" aria-label="Instagram">
+            IG
+          </a>
+
+          <a href="#" aria-label="TikTok">
+            TK
+          </a>
+
+          <a href="#" aria-label="YouTube">
+            YT
+          </a>
+
+          <a href="#" aria-label="LinkedIn">
+            IN
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT SIDE -->
+
+      <div class="hero-visual">
+
+        <!-- PHOTO WINDOW -->
+
+        <div class="photo-window">
+
+          <div class="photo-window-bar">
+
+            <div class="photo-title">
+
+              <span class="tiny-image-icon"></span>
+
+              <span>
+                sammi.jpg
+              </span>
+
+            </div>
+
+            <div class="photo-controls">
+
+              <span>—</span>
+              <span>□</span>
+              <span>×</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="photo-container">
+
+            <img
+              src="assets/images/sammi-hero.png"
+              alt="Sammi"
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- NOTIFICATION -->
+
+        <div class="desktop-notification">
+
+          <div class="notification-icon">
+            !
+          </div>
+
+          <div>
+
+            <strong>
+              New content detected
+            </strong>
+
+            <span>
+              you should probably click a folder
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- FOLDERS -->
+
+        <div class="folder-area">
+
+          <!-- CONTENT -->
+
+          <a
+            href="content.html"
+            class="desktop-folder folder-content"
+          >
+
+            <div class="folder">
+
+              <div class="folder-back"></div>
+
+              <div class="folder-files">
+
+                <div class="folder-file file-one">
+                  <span>▶</span>
+                  youtube.mp4
+                </div>
+
+                <div class="folder-file file-two">
+                  <span>♥</span>
+                  tiktok.mov
+                </div>
+
+              </div>
+
+              <div class="folder-front"></div>
+
+            </div>
+
+            <span class="folder-label">
+              CONTENT
+            </span>
+
+          </a>
+
+
+          <!-- UGC -->
+
+          <a
+            href="ugc.html"
+            class="desktop-folder folder-ugc"
+          >
+
+            <div class="folder">
+
+              <div class="folder-back"></div>
+
+              <div class="folder-files">
+
+                <div class="folder-file file-one">
+                  <span>★</span>
+                  collab.mp4
+                </div>
+
+                <div class="folder-file file-two">
+                  <span>▶</span>
+                  ugc.mov
+                </div>
+
+              </div>
+
+              <div class="folder-front"></div>
+
+            </div>
+
+            <span class="folder-label">
+              UGC
+            </span>
+
+          </a>
+
+
+          <!-- MEDIA KIT -->
+
+          <a
+            href="media-kit.html"
+            class="desktop-folder folder-media"
+          >
+
+            <div class="folder">
+
+              <div class="folder-back"></div>
+
+              <div class="folder-files">
+
+                <div class="folder-file file-one">
+                  <span>↗</span>
+                  stats.pdf
+                </div>
+
+                <div class="folder-file file-two">
+                  <span>+</span>
+                  media_kit.pdf
+                </div>
+
+              </div>
+
+              <div class="folder-front"></div>
+
+            </div>
+
+            <span class="folder-label">
+              MEDIA KIT
+            </span>
+
+          </a>
+
+        </div>
+
+
+        <!-- CLICK NOTE -->
+
+        <div class="click-note">
+
+          <span class="cursor-arrow">
+            ↖
+          </span>
+
+          <span>
+            open a folder
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </header>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
