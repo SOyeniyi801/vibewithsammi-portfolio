@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Content | Vibe with Sammi</title>
+
+    <meta
+      name="description"
+      content="Explore content by Sammi across tech, lifestyle, creative entrepreneurship and YouTube."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chango&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="content-page">
+    <!-- =====================================================
+       NAVIGATION
+  ====================================================== -->
+
+    <nav class="site-nav">
+      <div class="nav-shell">
+        <div class="nav-panel" id="mainNav">
+          <a class="nav-link" href="index.html"> Home </a>
+
+          <a class="nav-link" href="about.html"> About </a>
+
+          <div class="nav-dropdown">
+            <button
+              class="nav-link recent-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              Recent Work
+            </button>
+
+            <div class="recent-dropdown">
+              <a href="content.html" class="active"> My Content </a>
+
+              <a href="ugc.html"> UGC + Brand Work </a>
+            </div>
+          </div>
+
+          <a class="nav-link" href="services.html"> Rates + Services </a>
+
+          <a class="nav-link" href="media-kit.html"> Media Kit </a>
+
+          <a class="nav-link" href="contact.html"> Contact </a>
+        </div>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="mainNav"
+        >
+          <span>ME</span>
+          <span>NU</span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="page-main">
+      <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="page-hero content-page-hero">
+        <div class="page-shell content-hero-grid">
+      
+          <div class="page-hero-copy">
+            <span class="section-eyebrow">MY_CONTENT.EXE</span>
+      
+            <h1>
+              MY<br>
+              CONTENT.
+            </h1>
+      
+            <p class="lead-copy">
+              A little tech, a little lifestyle, a lot of figuring things out
+              in real time.
+            </p>
+      
+            <p>
+              I create around the things I'm actually doing — learning,
+              building, creating, traveling and navigating life as a creative
+              person in tech.
+            </p>
+      
+            <div class="content-topic-row">
+              <span>TECH</span>
+              <span>LIFESTYLE</span>
+              <span>CREATIVE ENTREPRENEURSHIP</span>
+            </div>
+          </div>
+      
+          <div class="content-hero-visual">
+
+            <div class="xp-window content-hero-window">
+          
+              <div class="xp-window-bar">
+                <span>currently_creating.jpg</span>
+          
+                <div class="xp-window-controls">
+                  <span>—</span>
+                  <span>□</span>
+                  <span>×</span>
+                </div>
+              </div>
+          
+              <div class="content-hero-image">
+                <img
+                  src="assets/images/content-hero.jpg"
+                  alt="Sammi creating content"
+                >
+              </div>
+          
+            </div>
+          
+            <div class="sticky-note content-hero-note">
+              <span>★</span>
+          
+              <p>
+                currently somewhere between having an idea
+                and making it a thing.
+              </p>
+            </div>
+          
+          </div>
+      
+        </div>
+      </section>
+      
+
+      <!-- =====================================================
+         CONTENT LIBRARY
+    ====================================================== -->
+
+    <section class="page-section content-library-section">
+        <div class="page-shell">
+      
+          <div class="section-heading-row">
+            <div>
+              <span class="section-eyebrow">CONTENT_LIBRARY</span>
+      
+              <h2>
+                WHAT I'VE BEEN<br>
+                MAKING.
+              </h2>
+            </div>
+      
+            <p class="section-side-copy">
+              Short-form videos, experiments, stories and whatever else I've
+              been inspired to make lately.
+            </p>
+          </div>
+      
+          <div class="content-filters" aria-label="Content categories">
+            <button
+              class="content-filter active"
+              type="button"
+              data-filter="all"
+            >
+              ALL
+            </button>
+      
+            <button
+              class="content-filter"
+              type="button"
+              data-filter="tech"
+            >
+              TECH
+            </button>
+      
+            <button
+              class="content-filter"
+              type="button"
+              data-filter="lifestyle"
+            >
+              LIFESTYLE
+            </button>
+      
+            <button
+              class="content-filter"
+              type="button"
+              data-filter="creative"
+            >
+              CREATIVE ENTREPRENEURSHIP
+            </button>
+          </div>
+      
+          <div class="content-grid">
+      
+            <!-- CARD 01 -->
+            <article
+              class="content-card"
+              data-category="tech"
+            >
+              <div class="content-card-media">
+                <video
+                  class="content-video"
+                  preload="metadata"
+                  playsinline
+                >
+                  <source
+                    src="assets/videos/content-01.mp4"
+                    type="video/mp4"
+                  >
+                </video>
+      
+                <button
+                  class="content-card-play"
+                  type="button"
+                  aria-label="Play video"
+                >
+                  ▶
+                </button>
+              </div>
+      
+              <div class="content-card-copy">
+                <span class="content-card-category">TECH</span>
+      
+                <h3>CONTENT TITLE GOES HERE</h3>
+      
+                <p>Short description of the video.</p>
+              </div>
+            </article>
+      
+      
+            <!-- CARD 02 -->
+            <article
+              class="content-card"
+              data-category="lifestyle"
+            >
+              <div class="content-card-media">
+                <video
+                  class="content-video"
+                  preload="metadata"
+                  playsinline
+                >
+                  <source
+                    src="assets/videos/content-02.mp4"
+                    type="video/mp4"
+                  >
+                </video>
+      
+                <button
+                  class="content-card-play"
+                  type="button"
+                  aria-label="Play video"
+                >
+                  ▶
+                </button>
+              </div>
+      
+              <div class="content-card-copy">
+                <span class="content-card-category">LIFESTYLE</span>
+      
+                <h3>CONTENT TITLE GOES HERE</h3>
+      
+                <p>Short description of the video.</p>
+              </div>
+            </article>
+      
+      
+            <!-- CARD 03 -->
+            <article
+              class="content-card"
+              data-category="creative"
+            >
+              <div class="content-card-media">
+                <video
+                  class="content-video"
+                  preload="metadata"
+                  playsinline
+                >
+                  <source
+                    src="assets/videos/content-03.mp4"
+                    type="video/mp4"
+                  >
+                </video>
+      
+                <button
+                  class="content-card-play"
+                  type="button"
+                  aria-label="Play video"
+                >
+                  ▶
+                </button>
+              </div>
+      
+              <div class="content-card-copy">
+                <span class="content-card-category">
+                  CREATIVE ENTREPRENEURSHIP
+                </span>
+      
+                <h3>CONTENT TITLE GOES HERE</h3>
+      
+                <p>Short description of the video.</p>
+              </div>
+            </article>
+      
+      
+            <!-- CARD 04 -->
+            <article
+              class="content-card"
+              data-category="tech"
+            >
+              <div class="content-card-media">
+                <video
+                  class="content-video"
+                  preload="metadata"
+                  playsinline
+                >
+                  <source
+                    src="assets/videos/content-04.mp4"
+                    type="video/mp4"
+                  >
+                </video>
+      
+                <button
+                  class="content-card-play"
+                  type="button"
+                  aria-label="Play video"
+                >
+                  ▶
+                </button>
+              </div>
+      
+              <div class="content-card-copy">
+                <span class="content-card-category">TECH</span>
+      
+                <h3>CONTENT TITLE GOES HERE</h3>
+      
+                <p>Short description of the video.</p>
+              </div>
+            </article>
+      
+      
+            <!-- CARD 05 -->
+            <article
+              class="content-card"
+              data-category="lifestyle"
+            >
+              <div class="content-card-media">
+                <video
+                  class="content-video"
+                  preload="metadata"
+                  playsinline
+                >
+                  <source
+                    src="assets/videos/content-05.mp4"
+                    type="video/mp4"
+                  >
+                </video>
+      
+                <button
+                  class="content-card-play"
+                  type="button"
+                  aria-label="Play video"
+                >
+                  ▶
+                </button>
+              </div>
+      
+              <div class="content-card-copy">
+                <span class="content-card-category">LIFESTYLE</span>
+      
+                <h3>CONTENT TITLE GOES HERE</h3>
+      
+                <p>Short description of the video.</p>
+              </div>
+            </article>
+      
+      
+            <!-- CARD 06 -->
+            <article
+              class="content-card"
+              data-category="creative"
+            >
+              <div class="content-card-media">
+                <video
+                  class="content-video"
+                  preload="metadata"
+                  playsinline
+                >
+                  <source
+                    src="assets/videos/content-06.mp4"
+                    type="video/mp4"
+                  >
+                </video>
+      
+                <button
+                  class="content-card-play"
+                  type="button"
+                  aria-label="Play video"
+                >
+                  ▶
+                </button>
+              </div>
+      
+              <div class="content-card-copy">
+                <span class="content-card-category">
+                  CREATIVE ENTREPRENEURSHIP
+                </span>
+      
+                <h3>CONTENT TITLE GOES HERE</h3>
+      
+                <p>Short description of the video.</p>
+              </div>
+            </article>
+      
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         YOUTUBE / LONG FORM
+    ====================================================== -->
+
+      <section class="page-section youtube-section">
+        <div class="page-shell youtube-layout">
+          <div class="youtube-copy">
+            <span class="section-eyebrow"> LONG_FORM.EXE </span>
+
+            <h2>
+              AND THEN THERE'S<br />
+              YOUTUBE.
+            </h2>
+
+            <p class="lead-copy">
+              For when I have more than 60 seconds worth of things to say.
+            </p>
+
+            <p>
+              My longer videos are where I get into the full story — creative
+              projects, work, events, tech, behind the scenes and whatever I'm
+              currently figuring out.
+            </p>
+
+            <a class="xp-button primary" href="https://www.youtube.com/@vibewithsammi" target="_blank" rel="noopener noreferrer">
+              VISIT MY YOUTUBE
+              <span>→</span>
+            </a>
+          </div>
+
+          <div class="youtube-window xp-window">
+
+            <div class="xp-window-bar">
+              <span>youtube.exe</span>
+          
+              <div class="xp-window-controls">
+                <span>—</span>
+                <span>□</span>
+                <span>×</span>
+              </div>
+            </div>
+          
+            <div class="youtube-window-screen">
+              <iframe
+                src="https://www.youtube.com/embed/T_5FIzM6_P8?si=upf3zL0Q1N9Ipqap"
+                title="YouTube video by Sammi"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         FOLLOW
+    ====================================================== -->
+
+      <section class="page-section follow-section">
+        <div class="page-shell">
+          <div class="follow-window xp-window">
+            <div class="xp-window-bar">
+              <span>find_me_online.exe</span>
+
+              <div class="xp-window-controls">
+                <span>—</span>
+                <span>□</span>
+                <span>×</span>
+              </div>
+            </div>
+
+            <div class="follow-window-content">
+              <div>
+                <span class="section-eyebrow"> KEEP UP WITH ME </span>
+
+                <h2>
+                  COME HANG<br />
+                  OUT ONLINE.
+                </h2>
+              </div>
+
+              <div class="follow-links">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  INSTAGRAM
+                  <span>↗</span>
+                </a>
+
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  TIKTOK
+                  <span>↗</span>
+                </a>
+
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  YOUTUBE
+                  <span>↗</span>
+                </a>
+
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  LINKEDIN
+                  <span>↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+
+       FOOTER
+
+  ========================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-shell">
+
+      <div class="footer-brand">
+
+        <span class="footer-script">
+
+          Vibe with
+
+        </span>
+
+        <strong>
+
+          SAMMI
+
+        </strong>
+
+        <p>
+
+          you made it to the bottom of the internet.
+
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <div>
+
+          <span>EXPLORE</span>
+
+          <a href="about.html">About</a>
+
+          <a href="content.html">My Content</a>
+
+          <a href="ugc.html">UGC + Brand Work</a>
+
+          <a href="services.html">Rates + Services</a>
+
+        </div>
+
+        <div>
+
+          <span>CONNECT</span>
+
+          <a href="#">Instagram</a>
+
+          <a href="#">TikTok</a>
+
+          <a href="#">YouTube</a>
+
+          <a href="#">LinkedIn</a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <span>
+
+          ATLANTA, GA
+
+        </span>
+
+        <a href="mailto:hello.vibewithsammi@gmail.com">
+
+          hello.vibewithsammi@gmail.com
+
+        </a>
+
+        <span>
+
+          © 2026 VIBE WITH SAMMI
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

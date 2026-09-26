@@ -50,16 +50,10 @@ const photoWindow = document.querySelector(".photo-window");
 
 */
 
-const navMediaQuery = window.matchMedia(
-
-  "(max-width: 950px)"
-
-);
+const navMediaQuery = window.matchMedia("(max-width: 950px)");
 
 function isMobileNav() {
-
   return navMediaQuery.matches;
-
 }
 
 /* =========================
@@ -69,53 +63,37 @@ function isMobileNav() {
 ========================== */
 
 function closeRecentDropdown() {
-
   if (!recentDropdown || !recentTrigger) {
-
     return;
-
   }
 
   recentDropdown.classList.remove("open");
 
   recentTrigger.setAttribute(
-
     "aria-expanded",
 
-    "false"
-
+    "false",
   );
-
 }
 
 function toggleRecentDropdown() {
-
   if (!recentDropdown || !recentTrigger) {
-
     return;
-
   }
 
-  const willOpen =
-
-    !recentDropdown.classList.contains("open");
+  const willOpen = !recentDropdown.classList.contains("open");
 
   recentDropdown.classList.toggle(
-
     "open",
 
-    willOpen
-
+    willOpen,
   );
 
   recentTrigger.setAttribute(
-
     "aria-expanded",
 
-    String(willOpen)
-
+    String(willOpen),
   );
-
 }
 
 /* =========================
@@ -125,93 +103,59 @@ function toggleRecentDropdown() {
 ========================== */
 
 function closeMobileNav() {
-
   if (!siteNav || !menuToggle) {
-
     return;
-
   }
 
   siteNav.classList.remove("open");
 
   menuToggle.setAttribute(
-
     "aria-expanded",
 
-    "false"
-
+    "false",
   );
 
   menuToggle.setAttribute(
-
     "aria-label",
 
-    "Open navigation"
-
+    "Open navigation",
   );
 
   closeRecentDropdown();
-
 }
 
 function openMobileNav() {
-
   if (!siteNav || !menuToggle) {
-
     return;
-
   }
 
   siteNav.classList.add("open");
 
   menuToggle.setAttribute(
-
     "aria-expanded",
 
-    "true"
-
+    "true",
   );
 
   menuToggle.setAttribute(
-
     "aria-label",
 
-    "Close navigation"
-
+    "Close navigation",
   );
-
 }
 
 function toggleMobileNav() {
-
-  if (
-
-    !siteNav ||
-
-    !menuToggle ||
-
-    !isMobileNav()
-
-  ) {
-
+  if (!siteNav || !menuToggle || !isMobileNav()) {
     return;
-
   }
 
-  const isOpen =
-
-    siteNav.classList.contains("open");
+  const isOpen = siteNav.classList.contains("open");
 
   if (isOpen) {
-
     closeMobileNav();
-
   } else {
-
     openMobileNav();
-
   }
-
 }
 
 /* =========================
@@ -221,13 +165,10 @@ function toggleMobileNav() {
 ========================== */
 
 if (menuToggle) {
-
   menuToggle.addEventListener(
-
     "click",
 
     (event) => {
-
       /*
 
         DESKTOP > 950px:
@@ -243,9 +184,7 @@ if (menuToggle) {
       */
 
       if (!isMobileNav()) {
-
         return;
-
       }
 
       event.preventDefault();
@@ -253,11 +192,8 @@ if (menuToggle) {
       event.stopPropagation();
 
       toggleMobileNav();
-
-    }
-
+    },
   );
-
 }
 
 /* =========================
@@ -267,13 +203,10 @@ if (menuToggle) {
 ========================== */
 
 if (recentTrigger) {
-
   recentTrigger.addEventListener(
-
     "click",
 
     (event) => {
-
       /*
 
         Desktop:
@@ -287,11 +220,9 @@ if (recentTrigger) {
       */
 
       if (!isMobileNav()) {
-
         event.preventDefault();
 
         return;
-
       }
 
       event.preventDefault();
@@ -299,11 +230,8 @@ if (recentTrigger) {
       event.stopPropagation();
 
       toggleRecentDropdown();
-
-    }
-
+    },
   );
-
 }
 
 /* =========================
@@ -325,37 +253,21 @@ if (recentTrigger) {
 */
 
 if (siteNav) {
-
-  const navLinks =
-
-    siteNav.querySelectorAll(
-
-      ".nav-panel a"
-
-    );
+  const navLinks = siteNav.querySelectorAll(".nav-panel a");
 
   navLinks.forEach((link) => {
-
     link.addEventListener(
-
       "click",
 
       () => {
-
         if (!isMobileNav()) {
-
           return;
-
         }
 
         closeMobileNav();
-
-      }
-
+      },
     );
-
   });
-
 }
 
 /* =========================
@@ -365,35 +277,17 @@ if (siteNav) {
 ========================== */
 
 document.addEventListener(
-
   "click",
 
   (event) => {
-
-    if (
-
-      !isMobileNav() ||
-
-      !siteNav
-
-    ) {
-
+    if (!isMobileNav() || !siteNav) {
       return;
-
     }
 
-    if (
-
-      !siteNav.contains(event.target)
-
-    ) {
-
+    if (!siteNav.contains(event.target)) {
       closeMobileNav();
-
     }
-
-  }
-
+  },
 );
 
 /* =========================
@@ -403,31 +297,19 @@ document.addEventListener(
 ========================== */
 
 document.addEventListener(
-
   "keydown",
 
   (event) => {
-
     if (event.key !== "Escape") {
-
       return;
-
     }
 
     closeMobileNav();
 
     folders.forEach((folder) => {
-
-      folder.classList.remove(
-
-        "folder-open"
-
-      );
-
+      folder.classList.remove("folder-open");
     });
-
-  }
-
+  },
 );
 
 /* =========================
@@ -437,33 +319,21 @@ document.addEventListener(
 ========================== */
 
 if (popupClose && welcomeWindow) {
-
   popupClose.addEventListener(
-
     "click",
 
     (event) => {
-
       event.preventDefault();
 
       event.stopPropagation();
 
-      welcomeWindow.classList.add(
-
-        "popup-closing"
-
-      );
+      welcomeWindow.classList.add("popup-closing");
 
       setTimeout(() => {
-
         welcomeWindow.hidden = true;
-
       }, 180);
-
-    }
-
+    },
   );
-
 }
 
 /* =========================
@@ -473,26 +343,15 @@ if (popupClose && welcomeWindow) {
 ========================== */
 
 folders.forEach((folder) => {
-
   folder.addEventListener(
-
     "click",
 
     (event) => {
-
       if (!isMobileNav()) {
-
         return;
-
       }
 
-      const isOpen =
-
-        folder.classList.contains(
-
-          "folder-open"
-
-        );
+      const isOpen = folder.classList.contains("folder-open");
 
       /*
 
@@ -507,45 +366,20 @@ folders.forEach((folder) => {
       */
 
       if (!isOpen) {
-
         event.preventDefault();
 
         event.stopPropagation();
 
-        folders.forEach(
-
-          (otherFolder) => {
-
-            if (
-
-              otherFolder !== folder
-
-            ) {
-
-              otherFolder.classList.remove(
-
-                "folder-open"
-
-              );
-
-            }
-
+        folders.forEach((otherFolder) => {
+          if (otherFolder !== folder) {
+            otherFolder.classList.remove("folder-open");
           }
+        });
 
-        );
-
-        folder.classList.add(
-
-          "folder-open"
-
-        );
-
+        folder.classList.add("folder-open");
       }
-
-    }
-
+    },
   );
-
 });
 
 /* =========================
@@ -555,37 +389,19 @@ folders.forEach((folder) => {
 ========================== */
 
 document.addEventListener(
-
   "click",
 
   (event) => {
-
-    const clickedFolder =
-
-      event.target.closest(
-
-        ".desktop-folder"
-
-      );
+    const clickedFolder = event.target.closest(".desktop-folder");
 
     if (clickedFolder) {
-
       return;
-
     }
 
     folders.forEach((folder) => {
-
-      folder.classList.remove(
-
-        "folder-open"
-
-      );
-
+      folder.classList.remove("folder-open");
     });
-
-  }
-
+  },
 );
 
 /* =========================
@@ -611,11 +427,8 @@ document.addEventListener(
 */
 
 function resetNavState() {
-
   if (!siteNav || !menuToggle) {
-
     return;
-
   }
 
   siteNav.classList.remove("open");
@@ -623,21 +436,16 @@ function resetNavState() {
   closeRecentDropdown();
 
   menuToggle.setAttribute(
-
     "aria-expanded",
 
-    "false"
-
+    "false",
   );
 
   menuToggle.setAttribute(
-
     "aria-label",
 
-    "Open navigation"
-
+    "Open navigation",
   );
-
 }
 
 navMediaQuery.addEventListener("change", resetNavState);
@@ -649,13 +457,10 @@ navMediaQuery.addEventListener("change", resetNavState);
 ========================== */
 
 if (heroWindow && photoWindow) {
-
   heroWindow.addEventListener(
-
     "mousemove",
 
     (event) => {
-
       /*
 
         Disable mouse movement effects
@@ -665,75 +470,48 @@ if (heroWindow && photoWindow) {
       */
 
       if (isMobileNav()) {
-
         return;
-
       }
 
-      const bounds =
+      const bounds = heroWindow.getBoundingClientRect();
 
-        heroWindow.getBoundingClientRect();
+      const mouseX = event.clientX - bounds.left;
 
-      const mouseX =
+      const mouseY = event.clientY - bounds.top;
 
-        event.clientX - bounds.left;
+      const percentX = mouseX / bounds.width - 0.5;
 
-      const mouseY =
-
-        event.clientY - bounds.top;
-
-      const percentX =
-
-        mouseX / bounds.width - 0.5;
-
-      const percentY =
-
-        mouseY / bounds.height - 0.5;
+      const percentY = mouseY / bounds.height - 0.5;
 
       photoWindow.style.setProperty(
-
         "--mouse-x",
 
-        `${percentX * 5}px`
-
+        `${percentX * 5}px`,
       );
 
       photoWindow.style.setProperty(
-
         "--mouse-y",
 
-        `${percentY * 5}px`
-
+        `${percentY * 5}px`,
       );
-
-    }
-
+    },
   );
 
   heroWindow.addEventListener(
-
     "mouseleave",
 
     () => {
-
       photoWindow.style.setProperty(
-
         "--mouse-x",
 
-        "0px"
-
+        "0px",
       );
 
       photoWindow.style.setProperty(
-
         "--mouse-y",
 
-        "0px"
-
+        "0px",
       );
-
-    }
-
+    },
   );
-
 }
