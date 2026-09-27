@@ -585,3 +585,29 @@ contentVideos.forEach((video) => {
     video.pause();
   });
 });
+
+/* CONTENT LIBRARY FILTERS */
+const contentFilters = document.querySelectorAll(".content-filter");
+const contentCards = document.querySelectorAll(".content-card");
+
+contentFilters.forEach((filter) => {
+  filter.addEventListener("click", () => {
+    const selectedFilter = filter.dataset.filter;
+
+    // Update active button
+    contentFilters.forEach((button) => {
+      button.classList.remove("active");
+    });
+
+    filter.classList.add("active");
+
+    // Filter cards
+    contentCards.forEach((card) => {
+      const category = card.dataset.category;
+      const shouldShow =
+        selectedFilter === "all" || category === selectedFilter;
+
+      card.hidden = !shouldShow;
+    });
+  });
+});
