@@ -515,3 +515,73 @@ if (heroWindow && photoWindow) {
     },
   );
 }
+
+/* =========================
+
+   CONTENT VIDEO PLAYBACK
+
+========================== */
+
+const contentVideos = document.querySelectorAll(".content-video");
+
+contentVideos.forEach((video) => {
+  const media = video.closest(".content-card-media");
+  const playButton = media.querySelector(".content-card-play");
+
+  if (!playButton) {
+    return;
+  }
+
+  playButton.addEventListener("click", () => {
+    /* Pause any other video currently playing */
+
+    contentVideos.forEach((otherVideo) => {
+      if (otherVideo !== video && !otherVideo.paused) {
+        otherVideo.pause();
+
+        const otherMedia = otherVideo.closest(".content-card-media");
+        const otherButton = otherMedia?.querySelector(".content-card-play");
+
+        if (otherButton) {
+          otherButton.textContent = "▶";
+          otherButton.setAttribute("aria-label", "Play video");
+        }
+      }
+    });
+
+    /* Play / pause selected video */
+
+    if (video.paused) {
+      video.play();
+
+      playButton.textContent = "❚❚";
+      playButton.setAttribute("aria-label", "Pause video");
+    } else {
+      video.pause();
+
+      playButton.textContent = "▶";
+      playButton.setAttribute("aria-label", "Play video");
+    }
+  });
+
+  video.addEventListener("ended", () => {
+    playButton.textContent = "▶";
+    playButton.setAttribute("aria-label", "Play video");
+  });
+});
+
+/* =========================
+   VIDEO THUMBNAILS
+========================== */
+
+contentVideos.forEach((video) => {
+  video.addEventListener("loadedmetadata", () => {
+    if (video.duration > 0) {
+      video.currentTime = 0.1;
+    }
+  });
+
+  video.addEventListener("seeked", () => {
+    video.pause();
+  });
+});
