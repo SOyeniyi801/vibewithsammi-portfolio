@@ -2810,7 +2810,7 @@ p {
 
   height: 100%;
 
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .work-preview-image img:not([src]),
