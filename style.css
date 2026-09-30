@@ -5595,7 +5595,7 @@ p {
   }
 
   .ugc-project-info h2 {
-    font-size: clamp(2.8rem, 12vw, 4rem);
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 
   .ugc-project-details > div {

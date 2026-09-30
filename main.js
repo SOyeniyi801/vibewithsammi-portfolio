@@ -607,7 +607,6 @@ contentFilters.forEach((filter) => {
       const shouldShow =
         selectedFilter === "all" || category === selectedFilter;
 
-      card.hidden = !shouldShow;
-    });
+        card.hidden = !shouldShow;    });
   });
 });
