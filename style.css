@@ -4256,6 +4256,13 @@ p {
 
     justify-content: space-between;
   }
+
+ 
+
+  .facts-section .section-heading-row h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1;
+  }
 }
 
 /* =========================================================
@@ -4270,11 +4277,12 @@ p {
   /* Hero */
 
   .about-hero-visual {
-    min-height: 390px;
+    min-height: 420px;
   }
-
+  
   .about-profile-window {
-    width: 92%;
+    top: 56%;
+    width: min(310px, 84%);
   }
 
   .about-hero-note {
