@@ -61,6 +61,7 @@ body {
   background: var(--blue);
 
   color: var(--black);
+  overflow-x: hidden;
 }
 
 button,
@@ -5593,6 +5594,9 @@ p {
   .ugc-project-grid {
     gap: 3rem;
   }
+  .ugc-project-info {
+    padding: 0 2em;
+  }
 
   .ugc-project-info h2 {
     font-size: clamp(2rem, 8vw, 3rem);
@@ -5605,6 +5609,7 @@ p {
   .ugc-project-examples {
     grid-template-columns: 1fr 1fr;
     gap: 0.85rem;
+    padding: 0 2em;
   }
 
   .ugc-post-card-offset {
@@ -7902,5 +7907,142 @@ p {
 
   .why-image-small {
     height: 230px;
+  }
+}
+
+/* =========================================
+   UGC PAGE — HORIZONTAL OVERFLOW FIX
+   ========================================= */
+
+.ugc-page-hero,
+.ugc-work-intro,
+.ugc-project,
+.ugc-cta-section {
+  overflow-x: clip;
+}
+
+.ugc-hero-grid,
+.ugc-project-grid,
+.ugc-hero-copy,
+.ugc-hero-visual,
+.ugc-project-info,
+.ugc-project-examples {
+  min-width: 0;
+}
+
+.ugc-hero-visual {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 1rem 3rem 0;
+}
+
+.ugc-hero-window {
+  width: min(96%, 540px);
+  margin-left: auto;
+}
+
+.ugc-hero-note {
+  right: 0.25rem;
+}
+
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .ugc-hero-visual {
+    width: 100%;
+    padding: 0 0.75rem 2.5rem;
+  }
+
+  .ugc-hero-window {
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .ugc-hero-note {
+    right: 0.35rem;
+    width: 145px;
+    padding: 1rem;
+  }
+
+  .ugc-project-grid {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .ugc-project-info,
+  .ugc-project-examples {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+
+
+
+/* =========================================
+   UGC PAGE — HORIZONTAL OVERFLOW FIX
+   ========================================= */
+
+.ugc-page-hero,
+.ugc-work-intro,
+.ugc-project,
+.ugc-cta-section {
+  overflow-x: clip;
+}
+
+.ugc-hero-grid,
+.ugc-project-grid,
+.ugc-hero-copy,
+.ugc-hero-visual,
+.ugc-project-info,
+.ugc-project-examples {
+  min-width: 0;
+}
+
+.ugc-hero-visual {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 1rem 3rem 0;
+}
+
+.ugc-hero-window {
+  width: min(96%, 540px);
+  margin-left: auto;
+}
+
+.ugc-hero-note {
+  right: 0.25rem;
+}
+
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .ugc-hero-visual {
+    width: 100%;
+    padding: 0 0.75rem 2.5rem;
+  }
+
+  .ugc-hero-window {
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .ugc-hero-note {
+    right: 0.35rem;
+    width: 145px;
+    padding: 1rem;
+  }
+
+  .ugc-project-grid {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .ugc-project-info,
+  .ugc-project-examples {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 }
