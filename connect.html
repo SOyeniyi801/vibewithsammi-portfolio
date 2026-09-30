@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#377fdc" />
+  <title>Connect With Sammi</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chango&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --blue: #377fdc;
+      --blue-dark: #1765c4;
+      --blue-light: #71b4ed;
+      --yellow: #f8c944;
+      --cream: #fffdf2;
+      --white: #ffffff;
+      --black: #111111;
+      --display: "Chango", sans-serif;
+      --body: "Manrope", sans-serif;
+      --border: 2px solid var(--black);
+      --shadow: 7px 7px 0 var(--black);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background:
+        linear-gradient(rgba(55,127,220,.10), rgba(55,127,220,.10)),
+        url("assets/hero-background.png") center / cover fixed,
+        var(--blue);
+      color: var(--black);
+      font-family: var(--body);
+    }
+
+    a, button { font: inherit; }
+
+    a { color: inherit; }
+
+    .connect-page {
+      width: min(100% - 2rem, 760px);
+      margin: 0 auto;
+      padding: 3rem 0 4rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: .65rem;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    /* DIGITAL BUSINESS CARD */
+    .profile-window {
+      background: rgba(255,255,255,.96);
+      border: var(--border);
+      border-radius: 13px;
+      box-shadow: 10px 10px 0 rgba(17,17,17,.95);
+      overflow: hidden;
+    }
+
+    .window-bar {
+      min-height: 42px;
+      padding: .55rem .7rem .55rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background: var(--blue);
+      border-bottom: var(--border);
+      color: var(--white);
+      font-size: .72rem;
+      font-weight: 800;
+    }
+
+    .window-controls {
+      display: flex;
+      gap: .3rem;
+      color: var(--black);
+    }
+
+    .window-controls span {
+      width: 25px;
+      height: 23px;
+      display: grid;
+      place-items: center;
+      background: var(--cream);
+      border: 1.5px solid var(--black);
+      border-radius: 3px;
+      font-size: .72rem;
+      line-height: 1;
+    }
+
+    .profile-content {
+      padding: clamp(1.5rem, 6vw, 3rem);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 1.25rem;
+      display: block;
+      object-fit: cover;
+      border: 3px solid var(--black);
+      border-radius: 50%;
+      background: var(--yellow);
+      box-shadow: 6px 6px 0 var(--black);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2, h3 {
+      font-family: var(--display);
+      font-weight: 400;
+      letter-spacing: -.035em;
+    }
+
+    h1 {
+      margin-bottom: .4rem;
+      font-size: clamp(2.25rem, 10vw, 4rem);
+      line-height: .95;
+    }
+
+    .title {
+      margin-bottom: 1rem;
+      font-size: .82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .tagline {
+      max-width: 390px;
+      margin: 0 auto 1.6rem;
+      font-size: .92rem;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .save-contact {
+      width: min(100%, 360px);
+      min-height: 54px;
+      margin: 0 auto 1.35rem;
+      padding: .8rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      background: var(--yellow);
+      border: 3px solid var(--black);
+      border-radius: 8px;
+      box-shadow: 5px 5px 0 var(--black);
+      color: var(--black);
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .save-contact:hover {
+      transform: translate(3px, 3px);
+      box-shadow: 2px 2px 0 var(--black);
+    }
+
+    .contact-lines {
+      display: grid;
+      gap: .55rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .contact-lines a {
+      width: fit-content;
+      max-width: 100%;
+      margin: auto;
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: .65rem;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      background: var(--yellow);
+      border: var(--border);
+      border-radius: 7px;
+      box-shadow: 3px 3px 0 var(--black);
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .socials a:hover {
+      background: var(--white);
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0 var(--black);
+    }
+
+    .socials img {
+      display: block;
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    .socials a[aria-label="YouTube"] img { width: 26px; }
+
+    /* ROUTING / FOLDERS */
+    .needs-section {
+      margin-top: 4rem;
+    }
+
+    .needs-heading {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .needs-heading h2 {
+      margin-bottom: .55rem;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      line-height: .95;
+    }
+
+    .needs-heading p {
+      max-width: 480px;
+      margin: 0 auto;
+      font-size: .82rem;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .need-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .need-card {
+      min-width: 0;
+      min-height: 175px;
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--cream);
+      border: 3px solid var(--black);
+      border-radius: 10px;
+      box-shadow: 6px 6px 0 var(--black);
+      text-decoration: none;
+      transition: transform 170ms ease, box-shadow 170ms ease, background 170ms ease;
+    }
+
+    .need-card:hover {
+      background: var(--white);
+      transform: translate(4px, 4px);
+      box-shadow: 2px 2px 0 var(--black);
+    }
+
+    .folder-icon {
+      position: relative;
+      width: 58px;
+      height: 42px;
+      margin-bottom: 1.25rem;
+      background: var(--yellow);
+      border: 2px solid var(--black);
+      border-radius: 4px;
+    }
+
+    .folder-icon::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -2px;
+      width: 27px;
+      height: 11px;
+      background: var(--yellow);
+      border: 2px solid var(--black);
+      border-bottom: 0;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .need-card h3 {
+      margin-bottom: .35rem;
+      font-size: clamp(1.15rem, 4vw, 1.55rem);
+      line-height: 1;
+    }
+
+    .need-card p {
+      margin-bottom: 1rem;
+      font-size: .73rem;
+      font-weight: 600;
+      line-height: 1.45;
+      opacity: .72;
+    }
+
+    .open-link {
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .footer {
+      padding-top: 3rem;
+      text-align: center;
+      color: var(--white);
+      font-size: .7rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 520px) {
+      .connect-page {
+        width: min(100% - 1.5rem, 760px);
+        padding-top: 1.25rem;
+      }
+
+      .profile-content { padding: 1.6rem 1.15rem 1.75rem; }
+
+      .avatar {
+        width: 96px;
+        height: 96px;
+      }
+
+      .window-bar { font-size: .66rem; }
+
+      .need-grid { gap: .8rem; }
+
+      .need-card {
+        min-height: 158px;
+        padding: 1rem;
+      }
+
+      .folder-icon {
+        width: 48px;
+        height: 35px;
+        margin-bottom: 1rem;
+      }
+
+      .folder-icon::before {
+        top: -9px;
+        width: 23px;
+        height: 10px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .need-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="connect-page">
+
+    <section class="profile-window" aria-labelledby="sammi-name">
+      <div class="window-bar">
+        <span>vibe_with_sammi.exe</span>
+        <div class="window-controls" aria-hidden="true">
+          <span>—</span><span>□</span><span>×</span>
+        </div>
+      </div>
+
+      <div class="profile-content">
+        <!-- Change this image if you want a different Connect-page photo -->
+        <img class="avatar" src="assets/avatar.gif" alt="Sammi" />
+
+        <span class="eyebrow">USER PROFILE</span>
+        <h1 id="sammi-name">SAMMI</h1>
+        <p class="title">Creative Entrepreneur</p>
+        <p class="tagline">I make cool things on and off the internet.</p>
+
+        <button class="save-contact" id="saveContact" type="button">
+          <span aria-hidden="true">＋</span>
+          SAVE TO CONTACTS
+        </button>
+
+        <div class="contact-lines">
+          <a href="mailto:hello.vibewithsammi@gmail.com">hello.vibewithsammi@gmail.com</a>
+          <a href="https://www.vibewithsammi.com" target="_blank" rel="noopener noreferrer">vibewithsammi.com</a>
+        </div>
+
+        <nav class="socials" aria-label="Social media">
+          <a href="https://www.instagram.com/vibewithsammi" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="assets/icons/instagram.svg" alt="" />
+          </a>
+          <a href="https://www.tiktok.com/@vibewithsammii" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <img src="assets/icons/tiktok.svg" alt="" />
+          </a>
+          <a href="https://www.youtube.com/@vibewithsammi" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="assets/icons/youtube.svg" alt="" />
+          </a>
+          <a href="https://www.linkedin.com/in/samantha-o-6384705a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin.svg" alt="" />
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="needs-section" aria-labelledby="needs-title">
+      <div class="needs-heading">
+        <span class="eyebrow">OPEN A FOLDER</span>
+        <h2 id="needs-title">WHAT DO YOU NEED?</h2>
+        <p>Pick what brought you here and I'll point you in the right direction.</p>
+      </div>
+
+      <div class="need-grid">
+
+        <a class="need-card" href="https://samoyen.com" target="_blank" rel="noopener noreferrer">
+          <div>
+            <div class="folder-icon" aria-hidden="true"></div>
+            <h3>DESIGN + TECH</h3>
+            <p>Product Design • UX • Technical</p>
+          </div>
+          <span class="open-link">VIEW WORK →</span>
+        </a>
+
+        <a class="need-card" href="https://floyecreative.co/" target="_blank" rel="noopener noreferrer">
+          <div>
+            <div class="folder-icon" aria-hidden="true"></div>
+            <h3>CREATIVE SERVICES</h3>
+            <p>Websites • Video Editing • Audits</p>
+          </div>
+          <span class="open-link">VIEW WORK →</span>
+        </a>
+
+        <a class="need-card" href="ugc.html">
+          <div>
+            <div class="folder-icon" aria-hidden="true"></div>
+            <h3>CONTENT + UGC</h3>
+            <p>Brand Content • UGC • Social</p>
+          </div>
+          <span class="open-link">LET'S COLLAB →</span>
+        </a>
+
+        <a class="need-card" href="https://www.sammishotthat.com/" target="_blank" rel="noopener noreferrer">
+          <div>
+            <div class="folder-icon" aria-hidden="true"></div>
+            <h3>PHOTO + BTS</h3>
+            <p>Events • Photography • BTS</p>
+          </div>
+          <span class="open-link">VIEW WORK →</span>
+        </a>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      VIBE WITH SAMMI · ATLANTA, GA
+    </footer>
+  </main>
+
+  <script>
+    const contact = {
+      firstName: "Sammi",
+      lastName: "Oyeniyi",
+      organization: "Vibe With Sammi",
+      title: "Creative Entrepreneur",
+      email: "hello.vibewithsammi@gmail.com",
+      website: "https://www.vibewithsammi.com"
+    };
+
+    function escapeVCard(value) {
+      return value
+        .replace(/\\/g, "\\\\")
+        .replace(/\n/g, "\\n")
+        .replace(/,/g, "\\,")
+        .replace(/;/g, "\\;");
+    }
+
+    document.getElementById("saveContact").addEventListener("click", () => {
+      const vcard = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        `N:${escapeVCard(contact.lastName)};${escapeVCard(contact.firstName)};;;`,
+        `FN:${escapeVCard(contact.firstName + " " + contact.lastName)}`,
+        `ORG:${escapeVCard(contact.organization)}`,
+        `TITLE:${escapeVCard(contact.title)}`,
+        `EMAIL;TYPE=INTERNET:${contact.email}`,
+        `URL:${contact.website}`,
+        "END:VCARD"
+      ].join("\r\n");
+
+      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+
+      link.href = url;
+      link.download = "sammi-oyeniyi.vcf";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+  </script>
+</body>
+</html>
