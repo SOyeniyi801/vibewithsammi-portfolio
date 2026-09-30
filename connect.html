@@ -484,9 +484,10 @@
       organization: "Vibe With Sammi",
       title: "Creative Entrepreneur",
       email: "hello.vibewithsammi@gmail.com",
-      website: "https://www.vibewithsammi.com"
+      website: "https://www.vibewithsammi.com",
+      photo: "assets/images/avatar.png"
     };
-
+  
     function escapeVCard(value) {
       return value
         .replace(/\\/g, "\\\\")
@@ -494,32 +495,91 @@
         .replace(/,/g, "\\,")
         .replace(/;/g, "\\;");
     }
-
-    document.getElementById("saveContact").addEventListener("click", () => {
-      const vcard = [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        `N:${escapeVCard(contact.lastName)};${escapeVCard(contact.firstName)};;;`,
-        `FN:${escapeVCard(contact.firstName + " " + contact.lastName)}`,
-        `ORG:${escapeVCard(contact.organization)}`,
-        `TITLE:${escapeVCard(contact.title)}`,
-        `EMAIL;TYPE=INTERNET:${contact.email}`,
-        `URL:${contact.website}`,
-        "END:VCARD"
-      ].join("\r\n");
-
-      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-
-      link.href = url;
-      link.download = "sammi-oyeniyi.vcf";
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
-    });
+  
+    async function imageToBase64(imagePath) {
+      const response = await fetch(imagePath);
+  
+      if (!response.ok) {
+        throw new Error("Could not load contact photo.");
+      }
+  
+      const blob = await response.blob();
+  
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+  
+        reader.onloadend = () => {
+          // Removes "data:image/jpeg;base64," from the beginning
+          const base64 = reader.result.split(",")[1];
+          resolve(base64);
+        };
+  
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+    }
+  
+    document
+      .getElementById("saveContact")
+      .addEventListener("click", async () => {
+        try {
+          // Convert avatar to Base64 so it can live inside the VCF
+          const photoBase64 = await imageToBase64(contact.photo);
+  
+          const vcard = [
+            "BEGIN:VCARD",
+            "VERSION:3.0",
+  
+            `N:${escapeVCard(contact.lastName)};${escapeVCard(
+              contact.firstName
+            )};;;`,
+  
+            `FN:${escapeVCard(
+              contact.firstName + " " + contact.lastName
+            )}`,
+  
+            `ORG:${escapeVCard(contact.organization)}`,
+  
+            `TITLE:${escapeVCard(contact.title)}`,
+  
+            `EMAIL;TYPE=INTERNET:${contact.email}`,
+  
+            `URL:${contact.website}`,
+  
+            // Embedded contact photo
+            `PHOTO;ENCODING=b;TYPE=JPEG:${photoBase64}`,
+  
+            "END:VCARD"
+          ].join("\r\n");
+  
+          // Create the VCF
+          const blob = new Blob([vcard], {
+            type: "text/vcard;charset=utf-8"
+          });
+  
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+  
+          link.href = url;
+          link.download = "sammi-oyeniyi.vcf";
+  
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+  
+          // Clean up temporary browser URL
+          setTimeout(() => {
+            URL.revokeObjectURL(url);
+          }, 1000);
+  
+        } catch (error) {
+          console.error("Error creating contact card:", error);
+  
+          alert(
+            "Something went wrong while creating the contact card. Please try again."
+          );
+        }
+      });
   </script>
 </body>
 </html>
