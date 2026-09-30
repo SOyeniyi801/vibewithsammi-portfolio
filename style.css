@@ -867,6 +867,13 @@ p {
   margin: 0;
 }
 
+.hero-socials a img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
+
 .location {
   display: flex;
 
