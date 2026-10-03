@@ -266,6 +266,50 @@
         right: 7%;
         transform: rotate(13deg);
       }
+      /* LATEST VLOG */
+
+.latest-vlog {
+  margin-bottom: 28px;
+}
+
+.latest-vlog-heading {
+  margin-bottom: 12px;
+}
+
+.latest-vlog-heading p {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: "Chango", display;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  line-height: 1;
+}
+
+.latest-vlog-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  padding: 6px;
+
+  background: var(--yellow);
+  border: 3px solid var(--black);
+  border-radius: 22px;
+
+  box-shadow: var(--shadow);
+
+  overflow: hidden;
+}
+
+.latest-vlog-video iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+  border-radius: 14px;
+}
 
       /* FOOTER */
 
@@ -398,7 +442,29 @@
         </nav>
       </header>
 
+    </header>
+
+    <section class="latest-vlog">
+      <div class="latest-vlog-heading">
+        <p>Watch my latest vlog</p>
+      </div>
+    
+      <div class="latest-vlog-video">
+        <iframe
+          src="https://www.youtube.com/embed/xT68oCJJi30?si=znsFcq12Yj24sePH"
+          title="Latest Vibe With Sammi vlog"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+    
+    <section class="links" aria-label="Links">
+
       <section class="links" aria-label="Links">
+        
         <a
         class="link-button"
         href="https://www.sammishotthat.com/"
