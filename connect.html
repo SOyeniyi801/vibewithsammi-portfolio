@@ -236,6 +236,82 @@
 
     .socials a[aria-label="YouTube"] img { width: 26px; }
 
+    /* ========================================
+   TEMP: CULTURECON GALLERY
+   DELETE THIS WHOLE BLOCK AFTER CULTURECON
+   ======================================== */
+
+.culturecon-gallery {
+  margin-top: 2.5rem;
+}
+
+.culturecon-window {
+  overflow: hidden;
+  background: var(--cream);
+  border: 3px solid var(--black);
+  border-radius: 12px;
+  box-shadow: 7px 7px 0 var(--black);
+}
+
+.culturecon-window-bar {
+  min-height: 40px;
+  padding: .55rem .85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--yellow);
+  border-bottom: 3px solid var(--black);
+  font-size: .72rem;
+  font-weight: 800;
+}
+
+.culturecon-content {
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  text-align: center;
+}
+
+.culturecon-content h2 {
+  margin-bottom: .7rem;
+  font-size: clamp(2rem, 8vw, 3.4rem);
+  line-height: .95;
+}
+
+.culturecon-content p {
+  max-width: 470px;
+  margin: 0 auto 1.4rem;
+  font-size: .86rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.culturecon-button {
+  width: min(100%, 360px);
+  min-height: 54px;
+  margin: 0 auto;
+  padding: .85rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+  border: 3px solid var(--black);
+  border-radius: 8px;
+  box-shadow: 5px 5px 0 var(--black);
+  color: var(--white);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.culturecon-button:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--black);
+}
+
+/* END TEMP: CULTURECON GALLERY */
+
     /* ROUTING / FOLDERS */
     .needs-section {
       margin-top: 4rem;
@@ -433,6 +509,36 @@
         </nav>
       </div>
     </section>
+
+    <!-- TEMP: CULTURECON GALLERY — REMOVE AFTER OCT 2026 -->
+<section class="culturecon-gallery" aria-labelledby="culturecon-title">
+  <div class="culturecon-window">
+    <div class="culturecon-window-bar">
+      <span>culturecon_photos.exe</span>
+      <span aria-hidden="true">📸</span>
+    </div>
+
+    <div class="culturecon-content">
+      <span class="eyebrow">CULTURECON NYC 2026</span>
+
+      <h2 id="culturecon-title">DID I SNAP YOU?</h2>
+
+      <p>
+        Day 1 photos are live. Browse the gallery, find your photo, and flex. Don’t forget to tag me @vibewithsammi 📸
+      </p>
+
+      <a
+        class="culturecon-button"
+        href="https://floyecreativeco.pixieset.com/culturecon2026/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        VIEW CULTURECON PHOTOS →
+      </a>
+    </div>
+  </div>
+</section>
+<!-- END TEMP: CULTURECON GALLERY -->
 
     <section class="needs-section" aria-labelledby="needs-title">
       <div class="needs-heading">
